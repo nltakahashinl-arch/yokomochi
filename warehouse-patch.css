@@ -1,0 +1,9 @@
+/* 予定が1件もない日の行全体をグレー表示 */
+.cell.no-service-day{background:#d9dde0!important;color:#59656d}
+.cell.no-service-day.entry.empty::after{content:"便なし";font-weight:700;color:#68747c}
+/* 倉庫カード */
+.warehouseCards{display:grid;grid-template-columns:repeat(5,minmax(170px,1fr));gap:12px;margin:14px 0 4px;text-align:left}
+.warehouseCard{position:relative;border:2px solid #26353f;background:#fff;min-height:104px;padding:10px;text-align:center;font-size:.72rem;line-height:1.45;white-space:pre-wrap}
+.warehouseCard strong{display:block;font-size:.8rem;margin-bottom:4px}.warehouseCard .editWarehouse{position:absolute;right:5px;top:5px;padding:3px 6px;font-size:.65rem}.warehouseCard.fixed .editWarehouse{display:none}
+@media(max-width:950px){.warehouseCards{grid-template-columns:repeat(2,minmax(210px,1fr))}}
+@media print{.warehouseCards{grid-template-columns:repeat(5,1fr);gap:5mm;margin-top:5mm}.warehouseCard{min-height:25mm;font-size:6pt;padding:2mm}.warehouseCard strong{font-size:6.5pt}.editWarehouse{display:none!important}}
